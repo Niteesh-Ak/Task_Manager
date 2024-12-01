@@ -26,7 +26,7 @@ export class TasksController {
     async getTasks(@Req() req: any) {
       const userId = req.user._id.toString();
       return this.tasksService.getTasksByUser(userId);
-      }
+    }
 
     @Get('created')
     @UseGuards(JwtAuthGuard)
@@ -41,4 +41,5 @@ export class TasksController {
         const userId = req.user._id.toString(); 
         return this.tasksService.getTaskStats(userId);
     }
-  }
+    
+}
