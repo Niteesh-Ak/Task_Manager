@@ -41,5 +41,5 @@ export class TasksController {
         const userId = req.user._id.toString(); 
         return this.tasksService.getTaskStats(userId);
     }
-    
+
 }

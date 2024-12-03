@@ -66,4 +66,34 @@ export class TasksService {
     }
     return result;
   }
+
+//   async getTaskStats(userId: string) {
+//     const taskStats = await.this.TaskModel.aggregate([
+//       {
+//         $facet: {
+//           createdTasks: [
+//             { $match: { createdBy: userId } },
+//             { $group: { _id: '$status', count: { $sum: 1 } } },
+//           ],
+//           assignedTasks: [
+//             { $match: { assignedTo: userId } },
+//             { $group: { _id: '$status', count: { $sum: 1 } } },
+//           ],
+//           totalCounts: [
+//             {
+//               $facet: {
+//                 totalCreated: [{ $match: { createdBy: userId } }, { $count: 'count' }],
+//                 totalAssigned: [{ $match: { assignedTo: userId } }, { $count: 'count' }],
+//               },
+//             }
+//           ],
+//         },
+//       },
+//     ]);
+
+// }
 }
+
+
+
+
